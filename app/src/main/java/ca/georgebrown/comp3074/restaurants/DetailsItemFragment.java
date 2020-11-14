@@ -102,14 +102,14 @@ public class DetailsItemFragment extends Fragment
 
         // textViewItem.setText(item.content);
         txtName.setText(item.getName());
-        txtType.setText(item.getType());
+        txtType.setText(item.getType() + " food");
         double p = Double.parseDouble(item.getPrice());
         NumberFormat fmt = NumberFormat.getCurrencyInstance();
-        txtPrice.setText(fmt.format(p));
+        txtPrice.setText("Price: " + fmt.format(p));
         txtAddress.setText(item.getAddress());
 
         String phone = item.getPhone();
-        String ph = "(" + item.getPhone().substring(0, 3) + ") " + phone.substring(3, 6) + " - " + phone.substring(6);
+        String ph = "Phone: (" + item.getPhone().substring(0, 3) + ") " + phone.substring(3, 6) + " - " + phone.substring(6);
         txtPhone.setText(ph);
         txtWebsite.setText(item.getWebsite());
         txtRate.setText("Rate: " + item.getRate());
