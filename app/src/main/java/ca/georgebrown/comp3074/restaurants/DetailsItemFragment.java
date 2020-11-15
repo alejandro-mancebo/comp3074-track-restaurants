@@ -102,7 +102,7 @@ public class DetailsItemFragment extends Fragment
 
         // textViewItem.setText(item.content);
         txtName.setText(item.getName());
-        txtType.setText(item.getType() + " food");
+        txtType.setText(item.getType() + " restaurant");
         double p = Double.parseDouble(item.getPrice());
         NumberFormat fmt = NumberFormat.getCurrencyInstance();
         txtPrice.setText("Price: " + fmt.format(p));
